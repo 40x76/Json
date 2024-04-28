@@ -14,4 +14,7 @@ bash ./log_reader.sh
 cat  custom_log.txt |cut -d "," -f2-11|grep -i -E "callName|session" > result.txt
 
 # 5. Modify result.txt by removing special character.........................
- sed -i -e "s/=/:/g; s/\[\]//g; s/(/,/g;s/)/'null'/g" result.txt
+sed -i -e "s/=/:/g; s/\[\]//g; s/(/,/g;s/)/'null'/g" result.txt
+
+# 6. Run python script...
+python3 main.py
